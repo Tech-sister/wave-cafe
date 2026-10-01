@@ -1,0 +1,731 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Open Sans", Arial, sans-serif;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    color: #ffffff;
+
+    background: #0b4649;
+}
+
+
+
+
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 38, 42, 0.16),
+            rgba(0, 38, 42, 0.16)
+        ),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+
+
+.main-wrapper {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 22px 12px;
+
+    display: grid;
+
+    
+    grid-template-columns: 39% 45.6%;
+
+    column-gap: 9.4%;
+
+    align-items: start;
+}
+
+
+
+
+.left-side {
+
+    width: 100%;
+}
+
+
+
+
+.logo-box {
+
+    width: 100%;
+
+    height: 207px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 21px;
+}
+
+
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 17px;
+
+    color: #13a7a8;
+
+    font-family: "Lobster", cursive;
+
+    font-size: 43px;
+
+    line-height: 1;
+}
+
+
+.cup-icon {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 55px;
+
+    color: #13a7a8;
+
+    transform: translateY(-2px);
+}
+
+
+.cup-icon i {
+
+    font-size: 50px;
+}
+
+
+
+
+.menu-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.95fr;
+
+    gap: 28px 18px;
+}
+
+
+
+.menu-item {
+
+    border: none;
+
+    outline: none;
+
+    height: 124px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #159fa0;
+
+    cursor: pointer;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: all 0.25s ease;
+}
+
+
+.menu-item i {
+
+    font-size: 27px;
+}
+
+
+.menu-item:hover {
+
+    background: #13a7a8;
+
+    color: #ffffff;
+
+}
+
+
+.menu-item.selected {
+
+    background: #13a7a8;
+
+    color: #ffffff;
+}
+
+
+
+.right-side {
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+
+
+.category-bar {
+
+    width: 100%;
+
+    height: 107px;
+
+    background: rgba(11, 20, 24, 0.72);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    padding: 0 27px;
+
+    margin-bottom: 23px;
+}
+
+
+
+
+.category {
+
+    position: relative;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    padding: 0 5px;
+}
+
+
+.category::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 38px;
+
+    height: 4px;
+
+    background: transparent;
+}
+
+
+.category.active {
+
+    color: #00ffff;
+
+}
+
+
+.category.active::after {
+
+    background: #00ffff;
+
+}
+
+
+
+
+.category-content {
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 34px;
+
+    max-height: calc(100vh - 155px);
+
+    overflow-y: auto;
+
+    padding-right: 0;
+
+}
+
+
+/*
+    Hide scrollbar while keeping scrolling
+*/
+
+.category-content::-webkit-scrollbar {
+
+    width: 0;
+
+}
+
+
+.category-content.active {
+
+    display: flex;
+
+}
+
+
+
+
+.drink {
+
+    width: 100%;
+
+    min-height: 205px;
+
+    display: grid;
+
+    grid-template-columns: 206px 1fr;
+
+}
+
+
+
+
+.drink > img {
+
+    width: 206px;
+
+    height: 205px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.drink-description {
+
+    min-width: 0;
+
+    min-height: 205px;
+
+    background: rgba(7, 17, 20, 0.76);
+
+    padding: 45px 39px 25px 39px;
+}
+
+
+.drink-heading {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 24px;
+}
+
+
+.drink-heading h2 {
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.drink-heading span {
+
+    color: #00ffff;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+
+.drink-description p {
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+
+    margin-bottom: 2px;
+}
+
+
+
+@media (min-width: 1400px) {
+
+    .main-wrapper {
+
+        padding-top: 22px;
+
+        padding-left: 12px;
+
+        padding-right: 81px;
+
+    }
+
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+    .main-wrapper {
+
+        grid-template-columns: 40% 55%;
+
+        column-gap: 5%;
+
+        padding: 20px;
+    }
+
+
+    .logo {
+
+        font-size: 35px;
+    }
+
+
+    .cup-icon i {
+
+        font-size: 42px;
+    }
+
+
+    .menu-item {
+
+        font-size: 17px;
+    }
+
+
+    .drink {
+
+        grid-template-columns: 175px 1fr;
+    }
+
+
+    .drink > img {
+
+        width: 175px;
+
+        height: 190px;
+    }
+
+
+    .drink-description {
+
+        min-height: 190px;
+
+        padding: 30px;
+    }
+
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    .main-wrapper {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        padding: 20px;
+    }
+
+
+    .left-side,
+    .right-side {
+
+        width: 100%;
+    }
+
+
+    .logo-box {
+
+        height: 170px;
+    }
+
+
+    .menu-item {
+
+        height: 100px;
+    }
+
+
+    .category-content {
+
+        max-height: none;
+
+        overflow: visible;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .main-wrapper {
+
+        padding: 12px;
+
+        gap: 18px;
+    }
+
+
+    /* Logo */
+
+    .logo-box {
+
+        height: 130px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .logo {
+
+        font-size: 31px;
+
+        gap: 11px;
+    }
+
+
+    .cup-icon i {
+
+        font-size: 37px;
+    }
+
+
+
+    /* Menu */
+
+    .menu-grid {
+
+        gap: 12px;
+    }
+
+
+    .menu-item {
+
+        height: 80px;
+
+        font-size: 14px;
+
+        gap: 7px;
+    }
+
+
+    .menu-item i {
+
+        font-size: 20px;
+    }
+
+
+
+    /* Categories */
+
+    .category-bar {
+
+        height: 72px;
+
+        padding: 0 8px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .category {
+
+        font-size: 14px;
+
+        padding: 0;
+    }
+
+
+    .category::after {
+
+        bottom: 22px;
+
+        height: 3px;
+    }
+
+
+
+    /* Products */
+
+    .category-content {
+
+        gap: 20px;
+    }
+
+
+    .drink {
+
+        display: block;
+
+        width: 100%;
+    }
+
+
+    .drink > img {
+
+        width: 100%;
+
+        height: 220px;
+    }
+
+
+    .drink-description {
+
+        min-height: auto;
+
+        padding: 25px 22px;
+    }
+
+
+    .drink-heading {
+
+        margin-bottom: 18px;
+    }
+
+
+    .drink-heading h2 {
+
+        font-size: 18px;
+    }
+
+
+    .drink-heading span {
+
+        font-size: 18px;
+    }
+
+
+    .drink-description p {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .menu-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .menu-item {
+
+        height: 65px;
+    }
+
+
+    .category {
+
+        font-size: 12px;
+    }
+
+
+    .drink > img {
+
+        height: 190px;
+    }
+
+
+    .drink-heading {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+}

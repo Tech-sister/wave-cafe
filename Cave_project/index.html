@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wave Cafe</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="background"></div>
+
+
+
+    <div class="main-wrapper">
+
+
+
+        <aside class="left-side">
+
+            <!-- LOGO -->
+            <div class="logo-box">
+
+                <div class="logo">
+
+                    <div class="cup-icon">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+
+                    <span>Wave Cafe</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENU GRID -->
+            <div class="menu-grid">
+
+                <!-- Drink Menu -->
+                <button
+                    class="menu-item selected"
+                    onclick="selectMenu(this)"
+                >
+
+                    <i class="fa-solid fa-mug-hot"></i>
+
+                    <span>Drink Menu</span>
+
+                </button>
+
+
+                <!-- About -->
+                <button
+                    class="menu-item"
+                    onclick="selectMenu(this)"
+                >
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>About Us</span>
+
+                </button>
+
+
+                <!-- Special -->
+                <button
+                    class="menu-item"
+                    onclick="selectMenu(this)"
+                >
+
+                    <i class="fa-solid fa-filter"></i>
+
+                    <span>Special Items</span>
+
+                </button>
+
+
+                <!-- Contact -->
+                <button
+                    class="menu-item"
+                    onclick="selectMenu(this)"
+                >
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>Contact Us</span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+
+        <main class="right-side">
+
+
+            <nav class="category-bar">
+
+                <button
+                    class="category active"
+                    onclick="openCategory('iced', this)"
+                >
+                    Iced Coffee
+                </button>
+
+
+                <button
+                    class="category"
+                    onclick="openCategory('hot', this)"
+                >
+                    Hot Coffee
+                </button>
+
+
+                <button
+                    class="category"
+                    onclick="openCategory('juice', this)"
+                >
+                    Fruit Juice
+                </button>
+
+            </nav>
+
+
+
+           
+
+            <section
+                id="iced"
+                class="category-content active"
+            >
+
+
+                <!-- ITEM 1 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/iced-americano.png"
+                        alt="Iced Americano"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Iced Americano</h2>
+
+                            <span>$10.25</span>
+
+                        </div>
+
+
+                        <p>
+                            Here is a short description for the first item.
+                        </p>
+
+                        <p>
+                            Wave Cafe Template is provided by Tooplate.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITEM 2 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/iced-cappuccino.png"
+                        alt="Iced Cappuccino"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Iced Cappuccino</h2>
+
+                            <span>$12.50</span>
+
+                        </div>
+
+
+                        <p>
+                            Here is a list of 4 items or add more. You can
+                            use this template for commercial purposes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITEM 3 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/iced-espresso.png"
+                        alt="Iced Espresso"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Iced Espresso</h2>
+
+                            <span>$14.25</span>
+
+                        </div>
+
+
+                        <p>
+                            You are not permitted to redistribute this
+                            template ZIP file on any other template websites.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITEM 4 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/iced-latte.png"
+                        alt="Iced Latte"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Iced Latte</h2>
+
+                            <span>$11.50</span>
+
+                        </div>
+
+
+                        <p>
+                            Contents are organized into 3 tabs.
+                            Please contact Tooplate if you have anything to ask.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+         
+            <section
+                id="hot"
+                class="category-content"
+            >
+
+
+                <!-- ITEM 1 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/hot-americano.png"
+                        alt="Hot Americano"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Hot Americano</h2>
+
+                            <span>$8.50</span>
+
+                        </div>
+
+
+                        <p>
+                            Here is a short description for the item
+                            along with a squared thumbnail.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITEM 2 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/hot-cappuccino.png"
+                        alt="Hot Cappuccino"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Hot Cappuccino</h2>
+
+                            <span>$9.50</span>
+
+                        </div>
+
+
+                        <p>
+                            Here is a list of 4 items that can add more
+                            as you need. Only content area will be scrolling.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITEM 3 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/hot-espresso.png"
+                        alt="Hot Espresso"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Hot Espresso</h2>
+
+                            <span>$7.50</span>
+
+                        </div>
+
+
+                        <p>
+                            Left side logo and main menu are fixed.
+                            The video background is fixed.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITEM 4 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/hot-latte.png"
+                        alt="Hot Latte"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Hot Latte</h2>
+
+                            <span>$6.50</span>
+
+                        </div>
+
+
+                        <p>
+                            Page contents are organized into 3 tabs
+                            to show different lists of items.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section
+                id="juice"
+                class="category-content"
+            >
+
+
+                <!-- ITEM 1 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/smoothie-1.png"
+                        alt="Strawberry Smoothie"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Strawberry Smoothie</h2>
+
+                            <span>$12.50</span>
+
+                        </div>
+
+
+                        <p>
+                            Here is a short description for the item
+                            along with a squared thumbnail.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITEM 2 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/smoothie-2.png"
+                        alt="Red Berry Smoothie"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Red Berry Smoothie</h2>
+
+                            <span>$14.50</span>
+
+                        </div>
+
+
+                        <p>
+                            Here is a list of 4 items or add more.
+                            You can use this template for commercial purposes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITEM 3 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/smoothie-3.png"
+                        alt="Pineapple Smoothie"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Pineapple Smoothie</h2>
+
+                            <span>$16.50</span>
+
+                        </div>
+
+
+                        <p>
+                            Left side logo and main menu are fixed.
+                            The video background is fixed.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITEM 4 -->
+                <div class="drink">
+
+                    <img
+                        src="https://www.tooplate.com/templates/2121_wave_cafe/img/smoothie-4.png"
+                        alt="Spinach Smoothie"
+                    >
+
+                    <div class="drink-description">
+
+                        <div class="drink-heading">
+
+                            <h2>Spinach Smoothie</h2>
+
+                            <span>$18.50</span>
+
+                        </div>
+
+
+                        <p>
+                            You are not allowed to redistribute the
+                            template ZIP file on other template sites.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+
+    <script>
+
+        function openCategory(categoryName, clickedButton) {
+
+            /* Hide all categories */
+            const sections =
+                document.querySelectorAll(".category-content");
+
+            sections.forEach(function(section) {
+
+                section.classList.remove("active");
+
+            });
+
+
+            /* Show selected category */
+            const selected =
+                document.getElementById(categoryName);
+
+            selected.classList.add("active");
+
+
+            /* Remove active from buttons */
+            const buttons =
+                document.querySelectorAll(".category");
+
+            buttons.forEach(function(button) {
+
+                button.classList.remove("active");
+
+            });
+
+
+            /* Activate clicked button */
+            clickedButton.classList.add("active");
+
+        }
+
+
+
+        function selectMenu(clickedButton) {
+
+            const buttons =
+                document.querySelectorAll(".menu-item");
+
+            buttons.forEach(function(button) {
+
+                button.classList.remove("selected");
+
+            });
+
+            clickedButton.classList.add("selected");
+
+        }
+
+    </script>
+
+</body>
+</html>
